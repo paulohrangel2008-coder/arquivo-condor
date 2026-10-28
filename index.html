@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ARQUIVO CONDOR</title>
+<style>
+:root{--bg:#15130f;--paper:#d9ccaa;--ink:#221d14;--red:#8b1a1a;--green:#4a5a3a;--gray:#8a857a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--paper);font:17px/1.55 Georgia,serif}
+h1,h2,h3,.mono,button,nav a{font-family:"Courier New",monospace}
+header.cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:24px;background:radial-gradient(#2a251b,#0e0c09)}
+.stamp{border:4px solid var(--red);color:var(--red);padding:4px 14px;transform:rotate(-6deg);font:700 22px "Courier New",monospace;letter-spacing:3px;animation:st .8s both}
+@keyframes st{from{transform:rotate(-6deg) scale(2.4);opacity:0}to{transform:rotate(-6deg) scale(1);opacity:1}}
+h1{font-size:clamp(38px,9vw,88px);letter-spacing:6px;margin:.3em 0 0}
+button{background:var(--red);color:#f3e9cf;border:0;padding:12px 20px;font-size:15px;letter-spacing:1px;cursor:pointer;margin:4px}button:hover{background:#a82424}button.alt{background:var(--green)}
+nav{position:sticky;top:0;background:#0e0c09ee;display:flex;overflow-x:auto;z-index:5;border-bottom:1px solid var(--gray)}nav a{color:var(--paper);padding:12px 14px;white-space:nowrap;text-decoration:none;font-size:13px}nav a:hover{background:var(--red)}
+main{max-width:980px;margin:auto;padding:0 16px 60px}section{padding:40px 0;border-bottom:1px dashed var(--gray)}
+h2{color:#e6d9b3;border-left:6px solid var(--red);padding-left:12px}
+.sheet{background:var(--paper);color:var(--ink);padding:16px 18px;margin:12px 0;box-shadow:0 4px 14px #000}.sheet h3{margin-top:0}
+.tag{font:12px "Courier New";background:var(--ink);color:var(--paper);padding:2px 6px;margin-right:6px}
+.no{color:var(--red)}.hid{display:none}.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.ext{display:inline-block;background:var(--green);color:#f3e9cf;padding:8px 12px;margin:4px 4px 4px 0;font:14px "Courier New",monospace;text-decoration:none}.miss{border:2px dashed var(--gray);padding:12px;color:var(--gray);font-size:14px}
+svg{width:100%;background:#1d1a14;border:1px solid var(--gray)}.c{fill:#3a3528;stroke:var(--paper);stroke-width:1.5;cursor:pointer}.c:hover,.c.on{fill:var(--red)}.c.init{fill:#5a2a22}.c.late{fill:#46513a}.c.on{fill:var(--red)}
+text{fill:#f3e9cf;font:13px "Courier New",monospace;pointer-events:none}
+.ln{stroke:#e0584a;stroke-width:2;stroke-dasharray:6 6;animation:fl 1.2s linear infinite}.ln.lim{stroke:var(--gray)}@keyframes fl{to{stroke-dashoffset:-24}}
+.tl{display:flex;overflow-x:auto;gap:8px;padding:8px 0}.tl button{background:#2a251b;min-width:74px}.tl button.on{background:var(--red)}
+details summary{cursor:pointer;font-family:"Courier New"}footer{padding:20px;font-size:14px;color:var(--gray)}
+.full .brief{display:none}body.quick .full{display:none}
+</style></head><body>
+<header class="cover"><div class="stamp">CONFIDENCIAL</div><h1>ARQUIVO CONDOR</h1>
+<p class="mono">América do Sul, 1973–1983: ditaduras, repressão e conexões internacionais.</p>
+<p style="max-width:620px">Esta exposição investiga as ditaduras do Chile e da Argentina, a cooperação repressiva entre regimes militares e o papel dos Estados Unidos no contexto da Guerra Fria — separando o que os documentos provam do que ainda é debatido.</p>
+<button onclick="go('mapa')">ACESSAR O ARQUIVO</button><button class="alt" onclick="quick(true)">INVESTIGAÇÃO EM 60 SEGUNDOS</button></header>
+<nav><a href="#mapa">MAPA</a><a href="#chile">CHILE</a><a href="#argentina">ARGENTINA</a><a href="#eua">EUA</a><a href="#condor">CONDOR</a><a href="#vozes">VOZES</a><a href="#tempo">LINHA DO TEMPO</a><a href="#memoria">MEMÓRIA</a><a href="#fontes">FONTES</a></nav>
+<main>
+<section id="rapido"><h2>Investigação em 60 segundos</h2><div class="sheet"><ol>
+<li><b>Chile:</b> em 11/9/1973 militares derrubaram Salvador Allende; Augusto Pinochet governou até 1990.</li>
+<li><b>Argentina:</b> em 24/3/1976 uma junta depôs Isabel Perón; o terrorismo de Estado durou até 1983.</li>
+<li><b>Condor:</b> rede de cooperação repressiva entre ditaduras do Cone Sul, formalizada em novembro de 1975 em Santiago.</li>
+<li><b>EUA:</b> documentos desclassificados mostram ações encobertas no Chile e conhecimento da repressão; isso não prova que controlassem cada operação.</li>
+<li><b>Memória:</b> a descoberta do Arquivo do Terror (Paraguai, 1992) e os julgamentos transformaram documentos em justiça.</li></ol>
+<button onclick="quick(false)">EXPLORAR O MODO COMPLETO</button></div></section>
+
+<section id="mapa" class="full"><h2>Mapa da rede (esquemático)</h2>
+<p>Toque em um país. Mapa simplificado, <b>sem escala</b>: as linhas mostram o <i>quadro de cooperação</i>, não rotas de operações específicas.</p>
+<svg viewBox="0 0 400 330" id="map" role="img" aria-label="Mapa esquemático">
+<polygon class="c late" data-c="br" points="200,20 380,60 360,170 260,200 215,140"/><text x="290" y="110">BRASIL</text>
+<polygon class="c init" data-c="bo" points="150,90 215,100 225,160 160,165"/><text x="165" y="135">BOLÍVIA</text>
+<polygon class="c init" data-c="py" points="205,175 255,175 250,215 205,215"/><text x="198" y="198">PARAGUAI</text>
+<polygon class="c init" data-c="cl" points="110,100 145,110 150,290 120,320 105,200"/><text x="62" y="250">CHILE</text>
+<polygon class="c init" data-c="ar" points="155,170 200,220 250,225 230,290 160,320 150,290"/><text x="165" y="265">ARGENTINA</text>
+<polygon class="c init" data-c="uy" points="252,230 290,235 280,265 250,258"/><text x="245" y="285">URUGUAI</text>
+<g><line class="ln" x1="128" y1="210" x2="180" y2="260"/><line class="ln" x1="128" y1="210" x2="270" y2="250"/><line class="ln" x1="128" y1="210" x2="230" y2="195"/><line class="ln" x1="128" y1="210" x2="185" y2="135"/><line class="ln" x1="180" y1="260" x2="270" y2="250"/><line class="ln lim" x1="128" y1="210" x2="300" y2="110"/></g></svg>
+<p class="mono"><span style="color:#e0584a">▬ ▬</span> cooperação documentada &nbsp; <span style="color:#8a857a">▬ ▬</span> adesão posterior / documentação mais limitada &nbsp; Vermelho escuro = membros iniciais; verde = aderiu depois</p>
+<div class="sheet" id="panel"><h3>Selecione um país</h3><p>Chile, Argentina, Uruguai, Paraguai e Bolívia formam o núcleo inicial; o Brasil aderiu em 1976. Peru e Equador tiveram participação posterior e limitada.</p></div></section>
+
+<section id="chile" class="full"><h2>Chile: do golpe à ditadura</h2>
+<div class="sheet"><p>Salvador Allende governou de 1970 a 1973 em meio a forte polarização. Em <b>11/9/1973</b> as Forças Armadas deram o golpe e bombardearam La Moneda. Allende morreu no palácio; investigações e a perícia de 2011 concluíram suicídio. Pinochet assumiu o poder.</p>
+<p>A DINA, polícia secreta, perseguiu opositores com prisões, tortura, exílio e desaparecimentos. O Estádio Nacional foi usado como centro de detenção logo após o golpe. Relatórios oficiais (Rettig e Valech) reconheceram mais de 3.000 mortos e desaparecidos e cerca de 40 mil vítimas de prisão política e tortura. A ditadura terminou em 1990, após o plebiscito de 1988.</p></div></section>
+
+<section id="argentina" class="full"><h2>Argentina: o terrorismo de Estado</h2>
+<div class="sheet"><p>Em <b>24/3/1976</b> uma junta militar depôs Isabel Perón. Presidentes do período: Jorge Videla (1976–81), Roberto Viola (1981), Leopoldo Galtieri (1981–82) e Reynaldo Bignone (1982–83). Centros clandestinos de detenção, tortura, desaparecimentos e a apropriação de crianças marcaram o período. As Mães da Praça de Maio fizeram a primeira ronda em 30/4/1977 e as Avós surgiram em 22/10/1977. A democracia voltou em 1983; a CONADEP produziu o relatório <i>Nunca Más</i> (1984) e os militares foram julgados. Organizações de direitos humanos falam em cerca de 30 mil desaparecidos; o relatório da CONADEP documentou 8.961 casos.</p></div>
+</section>
+
+<section id="eua"><h2>O QUE OS ESTADOS UNIDOS SABIAM?</h2>
+<p>Clique em um documento. Distinguimos <b>o que comprova</b> de <b>o que não comprova</b>.</p>
+<div class="grid" id="docs"></div></section>
+
+<section id="condor" class="full"><h2>Operação Condor: como funcionava</h2>
+<div class="sheet"><p>Formalizada em novembro de 1975, em Santiago, reuniu serviços de inteligência para vigiar, capturar e eliminar opositores além das fronteiras, trocando informações e coordenando operações. Os Arquivos do Terror, achados em Assunção em 22/12/1992 pelo advogado Martín Almada, forneceram prova documental e foram usados em processos judiciais.</p>
+<button onclick="cmp(0)">DENTRO DE CADA PAÍS</button><button onclick="cmp(1)">ALÉM DAS FRONTEIRAS</button><button onclick="cmp(2)">DEPOIS: JUSTIÇA</button><p id="cmpt"></p></div></section>
+
+<section id="vozes" class="full"><h2>VOZES E IMAGENS DA ÉPOCA</h2>
+<p>Estes materiais ficam em arquivos de terceiros e abrem em outra aba (precisam de internet). Direitos de reprodução pertencem às instituições; por isso não foram copiados para o site.</p>
+<div class="grid">
+<div class="sheet"><span class="tag">ÁUDIO</span><h3>Último discurso de Allende</h3><p>Radio Magallanes, 11/9/1973, a partir das 9h10 (gravação do Archivo Sonoro). Em espanhol; texto na ficha abaixo. O som só toca quando você apertar o play.</p>
+<audio controls preload="none" style="width:100%" id="aud"><source src="https://www.archivosonoro.org/audio/archivosonoro-2006-07-07-62422.mp3" type="audio/mpeg">Seu navegador não toca áudio.</audio>
+<p id="audmsg" class="no hid">Não foi possível carregar o áudio (sem internet ou hospedagem fora do ar). Use os links abaixo.</p>
+<a class="ext" href="https://archive.org/details/DiscursosSalvadorAllende" target="_blank" rel="noopener">ÁUDIO NO INTERNET ARCHIVE (7h55) ↗</a><a class="ext" href="https://www.bibliotecanacionaldigital.gob.cl/visor/BND:82594" target="_blank" rel="noopener">BIBLIOTECA NACIONAL DO CHILE ↗</a><a class="ext" href="https://es.wikisource.org/wiki/%C3%9Altima_alocuci%C3%B3n_de_Salvador_Allende" target="_blank" rel="noopener">TEXTO ↗</a></div>
+<div class="sheet"><span class="tag">IMAGEM</span><h3>Bombardeio de La Moneda, 11/9/1973</h3>
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Golpe_de_Estado_1973.jpg?width=700" alt="Bombardeio do Palácio de La Moneda em 11 de setembro de 1973" loading="lazy" style="width:100%;height:auto;filter:grayscale(1)" onerror="this.outerHTML='<div class=miss>Imagem não carregou (sem internet). Use o link abaixo.</div>'">
+<p>Fotografia do golpe de 11/9/1973. Crédito: Wikimedia Commons (autoria e licença na página do arquivo).</p><a class="ext" href="https://commons.wikimedia.org/wiki/File:Golpe_de_Estado_1973.jpg" target="_blank" rel="noopener">PÁGINA DA IMAGEM E LICENÇA ↗</a></div>
+<div class="sheet"><span class="tag">FOTOS</span><h3>Argentina, 1976–1983</h3><p>Coletânea das Abuelas de Plaza de Mayo com fotografias de 30 anos de luta, incluindo soldados na Praça de Maio em 24/3/1976 (foto Eduardo Di Baia/AP) e a junta militar.</p><a class="ext" href="http://elsolardelasartes.com.ar/pdf/657.pdf" target="_blank" rel="noopener">VER COLETÂNEA ↗</a></div>
+<div class="sheet"><span class="tag">VÍDEO</span><h3>Bombardeio a La Moneda</h3><p>Microprograma de 1 minuto (Chilevisión) com imagens do bombardeio e o discurso de Allende. Acervo do Museo de la Memoria.</p><a class="ext" href="https://www.archivommdh.cl/index.php/cl-mmdh-00000045-000002-000175" target="_blank" rel="noopener">VER FICHA ↗</a></div>
+<div class="sheet"><span class="tag">FOTO</span><h3>La Moneda após o bombardeio, 1973</h3><p>Fotografias em preto e branco de 1973 do balcão e dos danos no palácio. Museo de la Memoria; reprodução sujeita a autorização.</p><a class="ext" href="https://archivommdh.cl/index.php/cl-mmdh-cl-mmdh-00000114-000001-000007" target="_blank" rel="noopener">VER FOTO 1 ↗</a><a class="ext" href="https://www.archivommdh.cl/index.php/cl-mmdh-cl-mmdh-00000114-000001-000004" target="_blank" rel="noopener">VER FOTO 2 ↗</a></div>
+<div class="sheet"><span class="tag">FOTO</span><h3>Hawker Hunter e La Moneda</h3><p>Aviões da Força Aérea atacaram o palácio presidencial. Arpillera do acervo do Museo de la Memoria.</p><a class="ext" href="https://archivommdh.cl/index.php/cl-mmdh-00000321-000001-000002" target="_blank" rel="noopener">VER ITEM ↗</a></div>
+<div class="sheet"><span class="tag">FOTO</span><h3>Madres de Plaza de Mayo</h3><p>Fotografias de Adelina Dematti de Alaye, que registrou as primeiras rondas das Madres; o acervo é reconhecido pela UNESCO e há cópia na Memoria Abierta.</p><a class="ext" href="https://revistaindex.net/index.php/cav/article/download/440/386/1398" target="_blank" rel="noopener">LER ESTUDO ↗</a></div>
+<div class="sheet"><span class="tag">ARQUIVO</span><h3>CONADEP / Nunca Más</h3><p>Arquivo da CONADEP com testemunhos de sobreviventes e familiares; inclui a filmagem do Julgamento das Juntas (1985).</p><a class="ext" href="https://www.argentina.gob.ar/node/421253" target="_blank" rel="noopener">ABRIR ARQUIVO ↗</a></div></div></section>
+
+<section id="tempo" class="full"><h2>Linha do tempo</h2><div class="tl" id="tl"></div><div class="sheet" id="tlt"></div></section>
+
+<section id="memoria" class="full"><h2>A MEMÓRIA É UMA FORMA DE JUSTIÇA</h2>
+<div class="sheet"><p>Identificar vítimas, abrir arquivos, julgar responsáveis e preservar locais de memória são formas de justiça. Familiares continuam buscando desaparecidos; comissões da verdade e julgamentos devolveram nomes e histórias.</p><p><b>O que acontece com a democracia quando o poder não encontra limites e os direitos humanos deixam de ser protegidos?</b></p></div></section>
+
+<section id="fontes"><h2>Fontes e créditos</h2><div class="sheet">
+<p>Imagens e áudios pertencem às instituições citadas e abrem em seus sites. O texto desta exposição foi escrito para este projeto.</p>
+<h3>Operação Condor e Arquivos do Terror</h3><ul><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://nsaislandora.wrlc.org/islandora/object/terror%3Aroot" target="_blank" rel="noopener">National Security Archive: Archive of Terror ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://www.iranrights.org/library/document/3058" target="_blank" rel="noopener">Truth Commission: Paraguay (descoberta em 1992 e Comissão da Verdade) ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://www.historynewsnetwork.org/article/159325" target="_blank" rel="noopener">National Security Archive: documentos da Condor no julgamento de Buenos Aires ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://ojs.ufgd.edu.br/historiaemreflexao/article/download/17722/10416/66040" target="_blank" rel="noopener">Revista História em Reflexão (UFGD): Operação Condor e Arquivo do Terror ↗</a></li></ul>
+<h3>Estados Unidos (documentos desclassificados)</h3><ul><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://nsarchive.gwu.edu/node/2262" target="_blank" rel="noopener">National Security Archive: Kissinger e Guzzetti, 10/6/1976 ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://nsarchive2.gwu.edu/NSAEBB/NSAEBB104/" target="_blank" rel="noopener">National Security Archive: memorandos de outubro de 1976 ↗</a></li></ul>
+<h3>Chile</h3><ul><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://es.wikisource.org/wiki/%C3%9Altima_alocuci%C3%B3n_de_Salvador_Allende" target="_blank" rel="noopener">Wikisource: último discurso de Allende ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://www.archivosonoro.org/archivos/salvador-allende/" target="_blank" rel="noopener">Archivo Sonoro: áudio do último discurso ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://commons.wikimedia.org/wiki/File:Golpe_de_Estado_1973.jpg" target="_blank" rel="noopener">Wikimedia Commons: Golpe de Estado 1973 ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="http://elsolardelasartes.com.ar/pdf/657.pdf" target="_blank" rel="noopener">Abuelas de Plaza de Mayo: fotos de 30 anos ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://canaltrece.com.co/noticias/9-11-septiembre-ultimo-discurso-salvador-allende-chile/" target="_blank" rel="noopener">Canal Trece: discurso em áudio ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://archivommdh.cl/index.php/cl-mmdh-00000398-000004-000002" target="_blank" rel="noopener">Museo de la Memoria: discurso de despedida (cartaz) ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://www.archivommdh.cl/index.php/cl-mmdh-00000045-000002-000175" target="_blank" rel="noopener">Museo de la Memoria: bombardeio a La Moneda (vídeo) ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://archivommdh.cl/index.php/cl-mmdh-cl-mmdh-00000114-000001-000007" target="_blank" rel="noopener">Museo de la Memoria: fotos de 1973 ↗</a></li></ul>
+<h3>Argentina</h3><ul><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://www.argentina.gob.ar/node/421253" target="_blank" rel="noopener">Presidência da Nação: Arquivo CONADEP ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://www.perfil.com/noticias/sociedad/hace-45-anos-las-madres-de-plaza-de-mayo-comenzaron-a-caminar.phtml" target="_blank" rel="noopener">Perfil: Madres de Plaza de Mayo, 1977 e CONADEP ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://revistaindex.net/index.php/cav/article/download/440/386/1398" target="_blank" rel="noopener">Arquivo fotográfico de Adelina Alaye ↗</a></li><li><a class="ext" style="padding:3px 8px;font-size:13px" href="https://memoriaabierta.org.ar/eng/novedades03.php" target="_blank" rel="noopener">Memoria Abierta: 20 anos do Nunca Más ↗</a></li></ul>
+<p><b>Atenção:</b> alguns dados (cifras oficiais do Chile, cronologia dos presidentes argentinos, perícia da morte de Allende em 2011, relatório Church) vêm de conhecimento geral e ainda precisam ser conferidos nas fontes primárias.</p></div></section>
+</main><footer>Sem cookies, sem coleta de dados, sem dependências externas.</footer>
+<script>document.getElementById("aud").addEventListener("error",()=>document.getElementById("audmsg").classList.remove("hid"),true);
+const P={
+cl:["Chile","Ditadura de Augusto Pinochet (1973–1990). Membro inicial da Condor; a DINA liderou a articulação e sediou o centro de informações da rede. Datas: 11/9/1973 golpe; 1975 Condor; 1988 plebiscito; 1990 fim do governo."],
+ar:["Argentina","Junta militar (1976–1983). Membro inicial; terrorismo de Estado com centros clandestinos e desaparecimentos. Datas: 24/3/1976 golpe; 1983 democracia."],
+uy:["Uruguai","Ditadura civil-militar (1973–1985). Membro inicial; uruguaios foram perseguidos também na Argentina."],
+py:["Paraguai","Ditadura de Alfredo Stroessner (1954–1989). Membro inicial; seus arquivos policiais foram descobertos em 1992 e revelaram a rede."],
+bo:["Bolívia","Governos militares no período (ex.: Hugo Banzer, 1971–1978). Participante inicial segundo a documentação disponível."],
+br:["Brasil","Ditadura militar (1964–1985). Aderiu à Condor em 1976, segundo fontes; o grau de participação em cada operação é objeto de pesquisa."]};
+document.querySelectorAll('.c').forEach(e=>e.onclick=()=>{document.querySelectorAll('.c').forEach(x=>x.classList.remove('on'));e.classList.add('on');const p=P[e.dataset.c];panel.innerHTML=`<h3>${p[0]}</h3><p>${p[1]}</p><div class="miss">Fotos e áudios deste país não incluídos nesta versão.</div>`});
+const D=[
+["Relatório do Comitê Church (Senado dos EUA)","1975","Senado dos EUA","Ações encobertas da CIA no Chile entre 1963 e 1973.","A CIA realizou ações encobertas no Chile antes do golpe.","Que os EUA planejaram ou executaram o golpe de 1973 ou a repressão posterior.",""],
+["Kissinger e o chanceler argentino Guzzetti (memorando de conversa)","10/6/1976","Departamento de Estado (Santiago), divulgado pelo National Security Archive em 2004","Kissinger disse que desejava sucesso ao novo governo argentino e, segundo o memorando, afirmou: \"If there are things that have to be done, you should do them quickly.\"","Que o chefe da diplomacia dos EUA sabia da situação e deu sinal de tolerância/apoio político à junta, sem citar direitos humanos.","Que os EUA planejaram ou ordenaram os desaparecimentos. Historiadores debatem o peso desse sinal.","https://nsarchive.gwu.edu/node/2262"],
+["Memorandos de Kissinger e Robinson com Guzzetti","6–7/10/1976","Departamento de Estado, divulgados em 2003 (National Security Archive)","Autoridades dos EUA conversaram com o chanceler da junta enquanto o embaixador Hill alertava sobre violações de direitos humanos.","Houve mensagens divergentes dentro do governo dos EUA; o embaixador pressionava por mudanças.","Uma política única e coerente de apoio à repressão.","https://nsarchive2.gwu.edu/NSAEBB/NSAEBB104/"],
+["Memorando da CIA sobre a Condor","23/6/1976","CIA (citado pelo National Security Archive)","Descreve a cooperação do Cone Sul, inclusive planos de operações fora da América Latina.","Que a CIA tinha informação sobre a Condor em 1976.","Que os EUA comandassem operações específicas.","https://nsarchive.gwu.edu/"],
+["Arquivos do Terror (Paraguai)","22/12/1992","Polícia paraguaia; National Security Archive","Documentos internos achados em Assunção por Martín Almada.","Existência e funcionamento da rede Condor; usados em processos judiciais.","Detalhes ausentes dos próprios documentos.","https://nsaislandora.wrlc.org/islandora/object/terror%3Aroot"]];
+D.forEach((d,i)=>docs.insertAdjacentHTML('beforeend',`<div class="sheet"><span class="tag">${d[2]}</span><span class="tag">${d[1]}</span><h3>${d[0]}</h3><button onclick="this.nextElementSibling.classList.toggle('hid')">ABRIR DOCUMENTO</button><div class="hid"><p>${d[3]}</p><p><b>Comprova:</b> ${d[4]}</p><p class="no"><b>Não comprova:</b> ${d[5]}</p>${d[6]?`<a class="ext" href="${d[6]}" target="_blank" rel="noopener">VER DOCUMENTO ORIGINAL ↗</a>`:''}</div></div>`));
+const T=[["1970","Allende toma posse no Chile."],["1973","11/9: golpe militar no Chile."],["1975","Condor formalizada em novembro."],["1976","24/3: golpe na Argentina."],["1983","Retorno da democracia na Argentina."],["1988","Plebiscito no Chile."],["1990","Fim do governo Pinochet; consequências da ditadura continuam."],["1992","Descoberta do Arquivo do Terror."]];
+T.forEach((t,i)=>{const b=document.createElement('button');b.textContent=t[0];b.onclick=()=>{[...tl.children].forEach(x=>x.classList.remove('on'));b.classList.add('on');tlt.innerHTML='<b>'+t[0]+'</b><p>'+t[1]+'</p>'};tl.appendChild(b)});tl.children[0].click();
+const C=["Cada ditadura usava seus próprios órgãos de segurança para vigiar e prender opositores.","A cooperação permitia perseguir exilados em outros países e trocar informações.","Arquivos e julgamentos posteriores permitiram identificar e responsabilizar envolvidos."];
+function cmp(i){cmpt.textContent=C[i]}cmp(0);
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function quick(q){document.body.classList.toggle('quick',q);go(q?'rapido':'mapa')}
+quick(false)
+</script></body></html>
